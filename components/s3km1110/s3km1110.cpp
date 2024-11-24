@@ -5,12 +5,14 @@
 namespace esphome {
 namespace s3km1110 {
 
+  static const char *const TAG = "s3km1110";
+
 
   void S3KM1110Component::setup()  {
     // This will be called once to set up the component
     // think of it as the setup() call in Arduino
-    ESP_LOGD("custom", "Component started");
 
+    ESP_LOGCONFIG(TAG, "Setting up S3KM1110...");
 
   }
   void S3KM1110Component::loop()  {
