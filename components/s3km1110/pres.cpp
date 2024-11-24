@@ -5,6 +5,8 @@ class MyCustomComponent : public Component {
   void setup() override {
     // This will be called once to set up the component
     // think of it as the setup() call in Arduino
+    ESP_LOGD("custom", "Component started");
+
 
   }
   void loop() override {
