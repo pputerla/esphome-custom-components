@@ -11,7 +11,6 @@ namespace s3km1110 {
   void S3KM1110Component::setup()  {
     // This will be called once to set up the component
     // think of it as the setup() call in Arduino
-
       ESP_LOGD(TAG, "Initializing s3km1110...");
 
   }
