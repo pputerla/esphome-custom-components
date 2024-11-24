@@ -6,8 +6,7 @@ namespace esphome {
 namespace remote_base {
 
 struct TCLData {
-  uint64_t data;
-  uint16_t command_repeats;
+  unsigned int data : 24;
 
   bool operator==(const TCLData &rhs) const { return data == rhs.data; }
 };
@@ -23,13 +22,11 @@ DECLARE_REMOTE_PROTOCOL(TCL)
 
 template<typename... Ts> class TCLAction : public RemoteTransmitterActionBase<Ts...> {
  public:
-  TEMPLATABLE_VALUE(uint64_t, data)
-  TEMPLATABLE_VALUE(uint16_t, command_repeats)
+  TEMPLATABLE_VALUE(uint32_t, data)
 
   void encode(RemoteTransmitData *dst, Ts... x) override {
     TCLData data{};
     data.data = this->data_.value(x...);
-    data.command_repeats = this->command_repeats_.value(x...);
     TCLProtocol().encode(dst, data);
   }
 };
