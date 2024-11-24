@@ -1,6 +1,11 @@
 #include "esphome.h"
 
-class MyCustomComponent : public Component {
+
+namespace esphome {
+namespace s3km1110 {
+
+
+class S3KM1110Component : public Component {
  public:
   void setup() override {
     // This will be called once to set up the component
@@ -20,3 +25,6 @@ class MyCustomComponent : public Component {
     }*/
   }
 };
+
+}
+}
