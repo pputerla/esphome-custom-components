@@ -12,7 +12,7 @@ MULTI_CONF = True
 s3km1110_ns = cg.esphome_ns.namespace("s3km1110")
 S3KM1110Component = s3km1110_ns.class_("S3KM1110Component", cg.Component, uart.UARTDevice)
 
-CONF_S3KM1110_ID = "s3km1110_id"
+#CONF_S3KM1110_ID = "s3km1110_id"
 
 CONFIG_SCHEMA = cv.All(
     cv.Schema(
