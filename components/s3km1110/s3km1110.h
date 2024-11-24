@@ -2,6 +2,12 @@
 
 #include "esphome/core/component.h"
 #include "esphome/components/uart/uart.h"
+#include "esphome/core/log.h"
+
+
+#ifdef USE_LOGGER
+#include "esphome/components/logger/logger.h"
+#endif
 
 namespace esphome {
 namespace s3km1110 {
